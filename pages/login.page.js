@@ -1,10 +1,18 @@
-const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../pages/login.page');
-const users = require('../data/users.json');
-
-test('login with valid credentials', async ({ page }) => {
-  const login = new LoginPage(page);
-  await login.goto();
-  await login.login(users.valid.username, users.valid.password);
-  await expect(page).toHaveURL(/dashboard/);
-});
+class LoginPage {
+    constructor(page) {
+      this.page = page;
+    }
+  
+    async goto() {
+      await this.page.goto('https://example.com/login');
+    }
+  
+    async login(username, password) {
+      await this.page.fill('#username', username);
+      await this.page.fill('#password', password);
+      await this.page.click('button[type="submit"]');
+    }
+  }
+  
+  module.exports = { LoginPage };
+  
