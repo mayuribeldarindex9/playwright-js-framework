@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# playwright-js-framework
+playwright-js-framework from scratch
+>>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
  Playwright js framework
 ---
 
@@ -60,8 +65,13 @@ The framework supports:
 
 ---
 
+<<<<<<< HEAD
 ## Setup & Installation
 
+=======
+## Setup & Installation ,Onboarding Instructions
+ 
+>>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
 1. Clone the repository:
 
    ```bash
@@ -69,16 +79,28 @@ The framework supports:
    cd playwright-js-framework
 ````
 
+<<<<<<< HEAD
 2. Install dependencies:
 
    ```bash
    npm install
+=======
+
+2. Install dependencies:
+
+   ```bash
+   npm install // use this command to install all dependencies from package.json
+>>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
    ```
 
 3. Install Playwright browsers:
 
    ```bash
+<<<<<<< HEAD
    npx playwright install
+=======
+   npx playwright install // use this command after you installed all dependencies from package.json 
+>>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
    ```
 
 4. Create `.env` file by copying example and add your environment variables:
@@ -93,6 +115,13 @@ The framework supports:
    npm run prepare
    ```
 
+<<<<<<< HEAD
+=======
+6. Run tests:
+npm run test       # run all tests headless
+npm run test:headed # run tests with browser UI visible
+npm run test:report # generate + open HTML report
+>>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
 ---
 
 ## Project Structure
@@ -118,7 +147,11 @@ playwright-js-framework/
 Run all tests:
 
 ```bash
+<<<<<<< HEAD
 npx playwright test
+=======
+npx playwright test  // to run the automation test case
+>>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
 ```
 
 Run tests with detailed logging and debugging:
