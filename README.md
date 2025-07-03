@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 # playwright-js-framework
 playwright-js-framework from scratch
->>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
  Playwright js framework
 ---
 
@@ -65,63 +62,50 @@ The framework supports:
 
 ---
 
-<<<<<<< HEAD
-## Setup & Installation
-
-=======
 ## Setup & Installation ,Onboarding Instructions
  
->>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
 1. Clone the repository:
 
-   ```bash
+ 
+ 
    git clone https://github.com/your-repo/playwright-js-framework.git
    cd playwright-js-framework
 ````
 
-<<<<<<< HEAD
-2. Install dependencies:
-
-   ```bash
-   npm install
-=======
 
 2. Install dependencies:
 
-   ```bash
+
+
+
    npm install // use this command to install all dependencies from package.json
->>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
    ```
 
 3. Install Playwright browsers:
 
-   ```bash
-<<<<<<< HEAD
-   npx playwright install
-=======
+
+
    npx playwright install // use this command after you installed all dependencies from package.json 
->>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
    ```
 
 4. Create `.env` file by copying example and add your environment variables:
 
-   ```bash
+
+
    cp .env.example .env
    ```
 
 5. (Optional) Install pre-commit hooks if configured:
 
-   ```bash
+
+
    npm run prepare
    ```
 
-<<<<<<< HEAD
-=======
 6. Run tests:
 npm run test       # run all tests headless
 npm run test:headed # run tests with browser UI visible
 npm run test:report # generate + open HTML report
->>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
 ---
 
 ## Project Structure
@@ -147,11 +131,7 @@ playwright-js-framework/
 Run all tests:
 
 ```bash
-<<<<<<< HEAD
-npx playwright test
-=======
 npx playwright test  // to run the automation test case
->>>>>>> 4ee3d2bc7cf6b5f69101acf919ceb5a9101eb457
 ```
 
 Run tests with detailed logging and debugging:
@@ -213,13 +193,13 @@ test('homepage has title', async ({ page }) => {
 
 * Run lint checks manually:
 
-  ```bash
+
   npm run lint
   ```
 
 * Auto-fix issues:
 
-  ```bash
+
   npm run lint:fix
   ```
 
@@ -237,7 +217,8 @@ test('homepage has title', async ({ page }) => {
 
 * Use:
 
-  ```bash
+
+
   npx playwright test --debug
   ```
 
@@ -257,6 +238,38 @@ test('homepage has title', async ({ page }) => {
 
 * View report at `playwright-report/index.html`.
 
+## Allure Reporting Integration
+
+## Allure provides comprehensive, interactive test reports with detailed steps, screenshots, and attachments.
+
+Installation:
+npm install --save-dev allure-playwright allure-commandline
+Usage:
+
+Run tests with Allure reporter:
+
+
+npm run test:allure
+Generate Allure HTML report:
+
+npm run allure:generate
+Open Allure report in browser:
+
+
+npm run allure:open
+Output folders:
+
+allure-results/ — Raw test results
+allure-report/ — Generated HTML report
+
+Recommended npm scripts (add to package.json):
+
+"scripts": {
+  "test:allure": "npx playwright test --reporter=line,allure-playwright",
+  "allure:generate": "allure generate allure-results --clean",
+  "allure:open": "allure open allure-report",
+  "clean:results": "rimraf allure-results playwright-report"
+}
 ---
 
 ## Parallel Execution
@@ -332,26 +345,3 @@ test('homepage has title', async ({ page }) => {
 
 ---
 
-## Contact
-
-For questions or support, reach out to **Your Team / Your Name** at \[[your-email@company.com](mailto:your-email@company.com)].
-
----
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-```
-
----
-
-**How to use:**
-
-- Replace URLs, emails, and names with your actual info.
-- Update badges with your repo’s real links.
-- Add or remove sections based on your project needs.
-- Keep it in your project root as `README.md`.
-
-
-```

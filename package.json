@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "npm_install": "npm install --save-dev @playwright/test",
     "test:headed": "npx playwright test --headed",
     "test:debug": "npx playwright test --debug",
     "test:report": "npx playwright show-report",
@@ -16,11 +17,15 @@
     "format": "prettier --write .",
     "check:env": "echo BASE_URL=$BASE_URL",
     "update:pw": "npx playwright install --with-deps",
-    "clean:results": "rm -rf test-results/ playwright-report/"
+    "clean:results": "rm -rf test-results/ playwright-report/ allure-results/ allure-report/",
+    "test:allure": "npx playwright test --reporter=line,allure-playwright",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report"
   },
   "keywords": [
     "playwright",
     "e2e",
+    "allure",
     "automation",
     "testing",
     "qa",
@@ -32,6 +37,8 @@
     "@playwright/test": "^1.43.1",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "allure-playwright": "^2.0.0",
+    "allure-commandline": "^2.13.9"
   }
 }
