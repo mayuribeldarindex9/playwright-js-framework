@@ -75,9 +75,7 @@ The framework supports:
 
 2. Install dependencies:
 
-
-
-
+   ```bash
    npm install // use this command to install all dependencies from package.json
    ```
 
@@ -345,3 +343,26 @@ Recommended npm scripts (add to package.json):
 
 ---
 
+## Contact
+
+For questions or support, reach out to **Your Team / Your Name** at \[[your-email@company.com](mailto:your-email@company.com)].
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+```
+
+---
+
+**How to use:**
+
+- Replace URLs, emails, and names with your actual info.
+- Update badges with your repo’s real links.
+- Add or remove sections based on your project needs.
+- Keep it in your project root as `README.md`.
+
+
+```
