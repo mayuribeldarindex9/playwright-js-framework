@@ -1,15 +1,37 @@
 {
-  "name": "playwright-js-framework_project_name",
+  "name": "playwright-js-framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "Robust Playwright JavaScript Automation Framework with useful scripts, structure, and CI support.",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "test:specific": "npx playwright test tests/",
+    "codegen": "npx playwright codegen",
+    "install:browsers": "npx playwright install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "check:env": "echo BASE_URL=$BASE_URL",
+    "update:pw": "npx playwright install --with-deps",
+    "clean:results": "rm -rf test-results/ playwright-report/"
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "automation",
+    "testing",
+    "qa",
+    "javascript"
+  ],
+  "author": "Mayuri Beldar",
+  "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.10"
+    "@playwright/test": "^1.43.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "dotenv": "^16.4.5"
   }
 }

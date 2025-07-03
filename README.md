@@ -62,8 +62,8 @@ The framework supports:
 
 ---
 
-## Setup & Installation
-
+## Setup & Installation ,Onboarding Instructions
+ 
 1. Clone the repository:
 
    ```bash
@@ -71,16 +71,17 @@ The framework supports:
    cd playwright-js-framework
 ````
 
+
 2. Install dependencies:
 
    ```bash
-   npm install
+   npm install // use this command to install all dependencies from package.json
    ```
 
 3. Install Playwright browsers:
 
    ```bash
-   npx playwright install
+   npx playwright install // use this command after you installed all dependencies from package.json 
    ```
 
 4. Create `.env` file by copying example and add your environment variables:
@@ -95,6 +96,10 @@ The framework supports:
    npm run prepare
    ```
 
+6. Run tests:
+npm run test       # run all tests headless
+npm run test:headed # run tests with browser UI visible
+npm run test:report # generate + open HTML report
 ---
 
 ## Project Structure
@@ -120,7 +125,7 @@ playwright-js-framework/
 Run all tests:
 
 ```bash
-npx playwright test
+npx playwright test  // to run the automation test case
 ```
 
 Run tests with detailed logging and debugging:
