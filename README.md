@@ -329,3 +329,64 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 
 ```
+
+GitHub Actions workflow of playwright.yml file:
+
+---
+
+### Workflow Name:
+
+**Playwright Tests & CI/CD Pipeline**
+
+### When it runs:
+
+* Whenever code is **pushed** to the `main` or `master` branches.
+* Whenever a **pull request** targets the `main` or `master` branches.
+
+---
+
+### Jobs in the workflow:
+
+---
+
+#### 1. **test** job: Run Tests & Quality Checks
+
+* Runs on a Linux machine (`ubuntu-latest`).
+* It tests on two Node.js versions: 16.x and 18.x.
+* It tests on three browsers: Chromium, Firefox, and WebKit (Safari’s engine).
+
+**Steps inside this job:**
+
+* **Checkout code:** Download the latest code from the repo.
+* **Setup Node.js:** Install the specified Node.js version and cache dependencies to speed up later runs.
+* **Install dependencies:** Run `npm ci` to install exact packages from the lock file.
+* **Install Playwright browsers:** Download necessary browser binaries needed for testing.
+* **Run ESLint:** Check code for style and errors.
+* **Run Prettier check:** Verify code formatting matches the rules.
+* **Run Playwright tests:** Run automated browser tests on the current browser in the matrix.
+* **Upload test report:** Always upload the test report so you can review results later.
+* **Upload screenshots/videos:** If tests fail, upload screenshots and videos showing the failure for debugging.
+
+---
+
+#### 2. **notify** job: Notify Team on Failure
+
+* Runs only if the **test** job fails.
+* Sends a Slack message to the team with details about the failure: which repo, branch, workflow, run number, and commit.
+
+---
+
+#### 3. **deploy** job: Deploy to Staging (Manual Approval)
+
+* Runs **only** after tests pass on pushes to the `main` branch.
+* Waits for a manual approval before deploying.
+* When approved, it triggers a separate workflow called **Deploy to Production** to actually deploy.
+
+---
+
+### Summary:
+
+This workflow automatically tests your code on multiple Node versions and browsers, checks code quality, and reports results. If tests fail, the team gets notified on Slack. When tests pass on `main`, deployment waits for manual approval before going live.
+
+---
+
