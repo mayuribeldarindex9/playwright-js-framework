@@ -75,7 +75,7 @@ The framework supports:
 2. Install dependencies:
 
    ```bash
-   npm install // use this command to install all dependencies from package.json
+   npm ci // use this command to install all dependencies from package.json
    ```
 
 3. Install Playwright browsers:
