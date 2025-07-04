@@ -109,16 +109,24 @@ npm run test:report # generate + open HTML report
 
 ```
 playwright-js-framework/
-├── .github/workflows/      # CI/CD pipeline configs
-├── data/                   # Test data files (JSON, CSV)
-├── pageObjects/            # Page Object Models
-├── tests/                  # Test suites
-├── utils/                  # Utility/helper functions
-├── .env.example            # Environment variables template
-├── playwright.config.ts    # Playwright config file
-├── package.json            # NPM dependencies & scripts
-├── README.md               # This documentation
-└── tsconfig.json           # TypeScript config
+├── .github/ # GitHub workflows for CI/CD (e.g., playwright.yml)
+├── configs/ # Configuration files for different environments (dev, staging, prod)
+├── src/ # Source code: tests, page objects, utilities, actions
+├── .env # Environment variables (local, not committed)
+├── .env.example # Example env variables template (committed)
+├── .eslintrc.js # ESLint configuration file for linting rules
+├── .gitignore # Files/folders to ignore in Git
+├── .prettierrc # Prettier config for consistent code formatting
+├── README.md # Project documentation and onboarding guide
+├── info.txt # Additional info or notes about the project
+├── package-lock.json # Exact versions of installed dependencies (auto-generated)
+├── package.json # Project dependencies and npm scripts
+├── playwright.config.ts # Playwright test framework configuration
+└── tsconfig.json # TypeScript compiler configuration
+
+Copy
+Edit
+
 ```
 
 ---
