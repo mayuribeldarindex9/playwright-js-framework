@@ -75,7 +75,6 @@ The framework supports:
 
 2. Install dependencies:
 
-   ```bash
    npm install // use this command to install all dependencies from package.json
    ```
 
@@ -128,31 +127,30 @@ playwright-js-framework/
 
 Run all tests:
 
-```bash
+
 npx playwright test  // to run the automation test case
 ```
 
 Run tests with detailed logging and debugging:
 
-```bash
+
 npx playwright test --debug
 ```
 
 Run tests in a specific file or folder:
 
-```bash
 npx playwright test tests/login.spec.ts
 ```
 
 Run tests in parallel (default is number of CPU cores):
 
-```bash
+
 npx playwright test --workers=4
 ```
 
 Run tests with specific tags/grep:
 
-```bash
+
 npx playwright test --grep @smoke
 ```
 
@@ -230,7 +228,6 @@ test('homepage has title', async ({ page }) => {
 
 * Generate HTML reports after tests:
 
-  ```bash
   npx playwright test --reporter=html
   ```
 
