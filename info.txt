@@ -1,0 +1,14 @@
+| Folder / File                    | Purpose                                                                           |
+| -------------------------------- | --------------------------------------------------------------------------------- |
+| **`.github/workflows/`**         | GitHub Actions for CI/CD. Runs lint, type checks, and tests on push/PR.           |
+| **`configs/`**                   | Environment-specific configs (URLs, credentials, timeouts). Load based on `.env`. |
+| **`src/pages/`**                 | Page Object Model — one file per UI screen with locators + methods.               |
+| **`src/actions/`**               | Higher-level flows using page objects (login as admin, create order, etc.).       |
+| **`src/tests/`**                 | Actual tests grouped by type: smoke, regression, API.                             |
+| **`src/fixtures/`**              | Test setup hooks like logged-in context, custom browser configs.                  |
+| **`src/utils/`**                 | Utility functions: data generators, API helpers, enums, constants.                |
+| **`src/middlewares/`**           | Custom beforeEach/afterEach logic (e.g., screenshots on failure).                 |
+| **`src/checks/`**                | Type-check and lint scripts for CI.                                               |
+| **`playwright.config.ts`**       | Core configuration file for Playwright: baseURL, retries, reporters, etc.         |
+| **`.env / .env.example`**        | Secure and share environment-specific credentials or URLs.                        |
+| **`.eslintrc.js / .prettierrc`** | Code quality and formatting configs.                                              |

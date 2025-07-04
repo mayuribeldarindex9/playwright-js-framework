@@ -32,8 +32,11 @@
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.43.1",
+    "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5",
-    "dotenv": "^16.4.5"
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
   }
 }
